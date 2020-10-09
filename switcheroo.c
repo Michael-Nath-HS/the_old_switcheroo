@@ -29,15 +29,15 @@ int main()
     // printing the contents
     for (i = 0; i < 10; i++)
     {
-        printf("%d ", my_array[i]);
-        // mp++;
+        printf("%d ", *mp);
+        mp++;
     }
     printf("\n");
     printf("contents of array 2\n");
     for (i = 0; i < 10; i++)
     {
-        printf("%d ", sep_array[i]);
-        // sp++;
+        printf("%d ", *sp);
+        sp++;
     }
     printf("\n");
     return 0;
