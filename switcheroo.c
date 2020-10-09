@@ -10,33 +10,34 @@ int main()
 {
     int my_array[10];
     int i;
+    srand(time(NULL));
     for (i = 0; i < 10; i++)
     {
-        srand(time(NULL));
         int x = rand();
         my_array[i] = x;
     }
+
     my_array[9] = 0;
     int sep_array[10];
     int *mp = my_array;
     int *sp = sep_array;
     for (i = 0; i < 10; i++)
     {
-        *(sp + i) = *(mp + (10 - i));
+        *(sp + i) = *(mp + (9 - i));
     }
-    printf("contents of array 1");
+    printf("contents of array 1\n");
     // printing the contents
     for (i = 0; i < 10; i++)
     {
-        printf("%d\t", *mp);
-        mp++;
+        printf("%d ", my_array[i]);
+        // mp++;
     }
     printf("\n");
-    printf("contents of array 2");
+    printf("contents of array 2\n");
     for (i = 0; i < 10; i++)
     {
-        printf("%d\t", *sp);
-        sp++;
+        printf("%d ", sep_array[i]);
+        // sp++;
     }
     printf("\n");
     return 0;
